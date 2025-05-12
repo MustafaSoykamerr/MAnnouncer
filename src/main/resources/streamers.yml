@@ -1,0 +1,44 @@
+# mAnnouncer Streamers Configuration
+# This file configures which streamers to track and how to announce them
+
+streamers:
+
+# Twitch streamer example
+  mustafalive:
+    platform: twitch
+    servers: ["all"]
+    announcement-types: ["chat", "title"]
+    interval: 60
+    webhook-url: ""
+    messages:
+      chat: "<gradient:#FF0000:#FF8000>🔴 LIVE</gradient> <white>» Mustafa is now streaming on Twitch! <click:open_url:{url}><hover:show_text:'<green>Click to open stream'>Click here to watch!</hover></click></white>"
+      title: "<gradient:#FF0000:#FF8000>🔴 LIVE</gradient>"
+      subtitle: "<white>Mustafa is now streaming!</white>"
+
+  # Kick streamer example
+  kickstreamer:
+    platform: kick
+    servers: ["all"]
+    announcement-types: ["chat", "bossbar"]
+    interval: 60
+    messages:
+      chat: "<gradient:#00FF00:#00AA00>🔴 LIVE</gradient> <white>» KickStreamer is live on Kick! <click:open_url:{url}><hover:show_text:'<green>Click to open stream'>Watch now!</hover></click></white>"
+      bossbar: "<gradient:#00FF00:#00AA00>🔴 LIVE ON KICK</gradient> <white>» KickStreamer is streaming now!</white>"
+
+  # YouTube streamer example
+  youtuber:
+    platform: youtube
+    servers: ["all"]
+    announcement-types: ["chat", "title", "bossbar"]
+    interval: 120
+    messages:
+      chat: "<gradient:#FF0000:#AA0000>🔴 LIVE</gradient> <white>» YouTuber is broadcasting on YouTube! <click:open_url:{url}><hover:show_text:'<green>Click to open stream'>Watch now!</hover></click></white>"
+      title: "<gradient:#FF0000:#AA0000>🔴 YOUTUBE LIVE</gradient>"
+      subtitle: "<white>YouTuber is streaming!</white>"
+
+  # Add more streamers as needed
+  # example2:
+  #   platform: youtube
+  #   servers: ["all"]
+  #   announcement-types: ["chat", "bossbar"]
+  #   interval: 120 

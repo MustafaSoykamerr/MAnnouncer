@@ -1,0 +1,47 @@
+# Default Title Announcements
+
+announcements:
+  welcome:
+    enabled: true
+    message: "<gradient:#00BFFF:#4169E1>Welcome!</gradient>"
+    sound: "minecraft:entity.player.levelup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    fade-in: 10  # Time in ticks (20 ticks = 1 second)
+    stay: 40
+    fade-out: 10
+    cooldown: 0
+    scheduled: false
+    interval: 0
+  
+  event:
+    enabled: true
+    message: "<gradient:#FFD700:#FFA500>Event Starting!</gradient>"
+    sound: "minecraft:entity.ender_dragon.growl"
+    volume: 0.5
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    fade-in: 20
+    stay: 60
+    fade-out: 20
+    cooldown: 0
+    scheduled: true
+    interval: 1800
+  
+  warning:
+    enabled: true
+    message: "<gradient:#FF0000:#FF5F5F>Warning!</gradient>"
+    sound: "minecraft:block.note_block.bass"
+    volume: 1.0
+    pitch: 0.5
+    permission: ""
+    webhook-url: ""
+    fade-in: 5
+    stay: 40
+    fade-out: 5
+    cooldown: 0
+    scheduled: false
+    interval: 0 

@@ -1,0 +1,54 @@
+# Default Chat Announcements
+
+announcements:
+  welcome:
+    enabled: true
+    message: "<gradient:#00BFFF:#4169E1>Welcome to our server!</gradient> <gray>Enjoy your stay!</gray>"
+    sound: "minecraft:entity.experience_orb.pickup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    typing-effect: true
+    cooldown: 0
+    scheduled: true
+    interval: 60
+  
+  rules:
+    enabled: true
+    message: "<gradient:#FFD700:#FFA500>Remember to follow our rules:</gradient>\n<gray>- No griefing\n- Be respectful\n- Have fun!</gray>"
+    sound: "minecraft:block.note_block.pling"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    typing-effect: true
+    cooldown: 0
+    scheduled: true
+    interval: 120
+  
+  discord:
+    enabled: true
+    message: "<gradient:#5865F2:#7289DA>Join our Discord!</gradient> <click:open_url:https://discord.gg/example><hover:show_text:'<green>Click to join our Discord'>Click here to join!</hover></click>"
+    sound: "minecraft:block.note_block.bit"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    typing-effect: true
+    cooldown: 0
+    scheduled: true
+    interval: 180
+  
+  vote:
+    enabled: true
+    message: "<gradient:#00FF00:#32CD32>Vote for our server!</gradient> <click:open_url:https://example.com/vote><hover:show_text:'<green>Click to vote'>Click here to vote!</hover></click>"
+    sound: "minecraft:entity.player.levelup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    typing-effect: true
+    cooldown: 0
+    scheduled: true
+    interval: 240 

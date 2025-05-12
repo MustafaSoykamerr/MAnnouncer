@@ -1,0 +1,146 @@
+# mAnnouncer Configuration
+# This file contains global settings for the plugin
+
+# Debug mode enables additional log messages
+debug: false
+
+# Permissions settings
+permissions:
+  # Base permission node for all commands and features
+  base: "mannouncer"
+  
+  # Permission nodes for commands
+  commands:
+    # Admin commands permission
+    admin: "mannouncer.admin"
+    # Reload command permission
+    reload: "mannouncer.reload"
+    # Test command permission
+    test: "mannouncer.test"
+    # Announcement command permission
+    announcement: "mannouncer.announcement"
+  
+  # Use LuckPerms for permissions if available
+  use-luckperms: true
+
+# Security settings
+security:
+  # Use rate limiting for commands to prevent spam
+  rate-limit-commands: true
+  
+  # Maximum number of command executions per minute per player
+  rate-limit-threshold: 10
+  
+  # Sanitize input to prevent injection attacks
+  sanitize-input: true
+
+# Servers settings
+servers:
+  # If true, all servers are considered online without checking
+  # This ensures announcements will be sent even if the server ping fails
+  assume-all-online: true
+  
+  # Check interval for server status (in seconds)
+  check-interval: 30
+
+# General announcement settings
+announcements:
+  # Enable the automatic announcement system
+  enabled: true
+  
+  # Global cooldown between announcements (in seconds)
+  global-cooldown: 5
+  
+  # Default interval between scheduled announcements (in seconds)
+  # This is used if an announcement has no interval set
+  default-interval: 60
+  
+  # Default sound for announcements (can be overridden in individual announcements)
+  default-sound: "minecraft:entity.experience_orb.pickup"
+  default-volume: 1.0
+  default-pitch: 1.0
+
+# Discord webhook settings
+discord:
+  # Enable Discord webhook integration
+  enabled: true
+  
+  # Default webhook URLs (can be overridden in individual announcements)
+  default-webhook-url: ""
+  
+  # Server status webhook URL (for server status notifications)
+  server-status-webhook-url: ""
+  
+  # Webhook embed customization
+  webhook-embed:
+    # Enable embeds for webhook messages (looks nicer in Discord)
+    enabled: true
+    
+    # Default color for embeds (hex format)
+    color: "#3498db"
+    
+    # Default footer text (use "none" to disable)
+    footer-text: "Powered by mAnnouncer"
+    
+    # Default footer icon URL (use "none" to disable)
+    footer-icon: "none"
+    
+    # Default thumbnail URL (use "none" to disable)
+    thumbnail-url: "none"
+
+# Streamer announcement settings
+streamers:
+  # Enable streamer announcements
+  enabled: true
+  
+  # Default check interval (in seconds)
+  check-interval: 60
+  
+  # Default announcement cooldown (in seconds)
+  cooldown: 1800
+  
+  # Default webhook URL for streamer announcements
+  default-webhook-url: ""
+  
+  # Otomatik durum simülasyonu (gerçek API olmadığı için)
+  simulation:
+    enabled: true
+    change-probability: 10 # 1/10 olasılık ile durum değişimi
+
+# Typography settings
+typing:
+  # Enable typing effect for chat announcements
+  enabled: true
+  
+  # Delay between characters (in milliseconds)
+  delay: 50
+  
+  # Max characters per message for typing effect
+  max-chars: 100
+
+# MiniMessage settings
+minimessage:
+  # Enable MiniMessage formatting
+  enabled: true
+  
+  # Enable RGB/Hex color support
+  rgb-enabled: true
+  
+  # Enable gradient support
+  gradient-enabled: true
+
+# ItemsAdder integration
+itemsadder:
+  # Enable ItemsAdder integration
+  enabled: false
+
+# Performance settings
+performance:
+  # Use a thread pool for announcement processing
+  use-thread-pool: true
+  
+  # Size of the thread pool (recommended: 1-4)
+  thread-pool-size: 1 # Daha az bellek kullanımı için düşürüldü
+  
+  # Batch announcements to reduce server load
+  batch-announcements: true 

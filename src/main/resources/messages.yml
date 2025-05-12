@@ -1,0 +1,36 @@
+# mAnnouncer Messages
+# This file contains all messages used by the plugin
+
+prefix: "<gradient:#00BFFF:#4169E1>mAnnouncer</gradient> <dark_gray>»</dark_gray> "
+
+general:
+  no-permission: "<red>You don't have permission to use this command.</red>"
+  server-not-found: "<red>Server <yellow>{server}</yellow> not found.</red>"
+  player-only: "<red>This command can only be used by players.</red>"
+  plugin-reloaded: "<green>Plugin reloaded successfully!</green>"
+  invalid-command: "<red>Invalid command usage. Type <yellow>/mannouncer</yellow> for help.</red>"
+  
+announcements:
+  not-found: "<red>Announcement with ID <yellow>{id}</yellow> not found on server <yellow>{server}</yellow>.</red>"
+  enabled: "<green>Announcement <yellow>{id}</yellow> has been enabled on server <yellow>{server}</yellow>.</green>"
+  disabled: "<red>Announcement <yellow>{id}</yellow> has been disabled on server <yellow>{server}</yellow>.</red>"
+  invalid-type: "<red>Invalid announcement type: <yellow>{type}</yellow>. Valid types: chat, bossbar, title, subtitle, advancement</red>"
+  test-sent: "<green>Announcement <yellow>{id}</yellow> has been tested on server <yellow>{server}</yellow>.</green>"
+  
+# Discord webhook messages
+discord:
+  streamer-live:
+    title: "🔴 LIVE: {streamer} is now streaming!"
+    description: "{streamer} is now streaming on {platform}. Come and join the stream!"
+    footer: "Powered by mAnnouncer"
+  
+  server-offline:
+    title: "⚠️ Server Offline"
+    description: "The server {server} is currently offline."
+    footer: "Powered by mAnnouncer"
+
+# Streamer announcement messages
+streamers:
+  live-chat: "<gradient:#FF0000:#FF5F5F>🔴 LIVE</gradient> <white>» {streamer} is now streaming on {platform}! <click:open_url:{url}><hover:show_text:'<green>Click to open stream'>Click here to watch!</hover></click></white>"
+  live-title: "<gradient:#FF0000:#FF5F5F>🔴 LIVE</gradient>"
+  live-subtitle: "<white>{streamer} is now streaming!" 

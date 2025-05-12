@@ -1,0 +1,44 @@
+# Default Advancement Announcements
+
+announcements:
+  achievement:
+    enabled: true
+    message: "<gradient:#DAA520:#FFD700>Achievement Unlocked!</gradient>"
+    description: "<gray>You've reached an important milestone!</gray>"
+    sound: "minecraft:ui.toast.challenge_complete"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    frame: "CHALLENGE"  # CHALLENGE, GOAL, TASK
+    cooldown: 0
+    scheduled: false
+    interval: 0
+  
+  special:
+    enabled: true
+    message: "<gradient:#9932CC:#BA55D3>Special Announcement</gradient>"
+    description: "<gray>Something special is happening!</gray>"
+    sound: "minecraft:entity.player.levelup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    frame: "GOAL"
+    cooldown: 0
+    scheduled: true
+    interval: 1200
+  
+  reward:
+    enabled: true
+    message: "<gradient:#00FF00:#32CD32>Reward Available</gradient>"
+    description: "<gray>Claim your special reward!</gray>"
+    sound: "minecraft:entity.experience_orb.pickup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    frame: "TASK"
+    cooldown: 0
+    scheduled: true
+    interval: 1800 

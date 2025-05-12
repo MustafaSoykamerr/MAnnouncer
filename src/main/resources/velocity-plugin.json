@@ -1,0 +1,9 @@
+{
+  "id": "mannouncer",
+  "name": "mAnnouncer",
+  "version": "1.0.0",
+  "description": "A modern and feature-rich announcement system for Velocity",
+  "authors": ["Midenium"],
+  "dependencies": [],
+  "main": "com.midenium.mannouncer.MAnnouncer"
+} 

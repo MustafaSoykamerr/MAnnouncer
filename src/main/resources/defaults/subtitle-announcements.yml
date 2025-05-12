@@ -1,0 +1,47 @@
+# Default Subtitle Announcements
+
+announcements:
+  welcome:
+    enabled: true
+    message: "<gray>Enjoy your stay on our server!</gray>"
+    sound: "minecraft:entity.experience_orb.pickup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    fade-in: 10  # Time in ticks (20 ticks = 1 second)
+    stay: 40
+    fade-out: 10
+    cooldown: 0
+    scheduled: false
+    interval: 0
+  
+  event:
+    enabled: true
+    message: "<gray>Get ready for fun!</gray>"
+    sound: "minecraft:block.note_block.pling"
+    volume: 0.5
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    fade-in: 20
+    stay: 60
+    fade-out: 20
+    cooldown: 0
+    scheduled: true
+    interval: 1800
+  
+  warning:
+    enabled: true
+    message: "<gray>Server will restart soon!</gray>"
+    sound: "minecraft:block.note_block.bass"
+    volume: 1.0
+    pitch: 0.5
+    permission: ""
+    webhook-url: ""
+    fade-in: 5
+    stay: 40
+    fade-out: 5
+    cooldown: 0
+    scheduled: false
+    interval: 0 

@@ -1,0 +1,47 @@
+# Default Bossbar Announcements
+
+announcements:
+  info:
+    enabled: true
+    message: "<gradient:#00BFFF:#4169E1>Welcome to our server!</gradient> <gray>Enjoy your stay!</gray>"
+    color: "BLUE"  # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+    style: "SOLID"  # SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+    sound: "minecraft:entity.experience_orb.pickup"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    duration: 10  # Duration in seconds
+    cooldown: 0
+    scheduled: true
+    interval: 300
+  
+  event:
+    enabled: true
+    message: "<gradient:#FFD700:#FFA500>Special event starting soon!</gradient> <gray>Get ready!</gray>"
+    color: "YELLOW"
+    style: "SEGMENTED_10"
+    sound: "minecraft:block.note_block.pling"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    duration: 15
+    cooldown: 0
+    scheduled: true
+    interval: 900
+  
+  warning:
+    enabled: true
+    message: "<gradient:#FF0000:#FF5F5F>Server restart in 5 minutes!</gradient>"
+    color: "RED"
+    style: "SOLID"
+    sound: "minecraft:block.note_block.bass"
+    volume: 1.0
+    pitch: 1.0
+    permission: ""
+    webhook-url: ""
+    duration: 20
+    cooldown: 0
+    scheduled: false
+    interval: 0 
