@@ -9,9 +9,6 @@ It allows you to easily manage and deliver announcements across all your servers
     Advancements
     Discord Webhooks
 
-
-[​IMG]
-
 Base node:
 Code (Text):
 mannouncer
@@ -30,7 +27,6 @@ Example:
 Code (Text):
 mannouncer.announcement.chat.boxpvp.1
 
-[​IMG]
 Each server has its own folder and announcement types inside:
 
 Code (Text):
@@ -52,8 +48,6 @@ Code (Text):
 Still need help?
 ➡️ Join our support Discord
 
-
-[​IMG]
 
 ✔ ItemsAdder support (planned)
 ✔ Better performance for large networks
