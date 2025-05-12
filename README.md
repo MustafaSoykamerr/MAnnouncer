@@ -1,57 +1,85 @@
-[​IMG]
-MAnnouncer is a powerful, modular, and Velocity-native announcement plugin designed for Minecraft networks using Velocity 3.4.0+ and Java 21.
+## 🛁 MAnnouncer | Velocity Plugin for Custom Announcements | 💬 Chat, 🖼️ Titles, 🎯 BossBars, 🌐 Discord Webhooks
 
-It allows you to easily manage and deliver announcements across all your servers individually — with full support for:
+---
 
-    Chat announcements
-    BossBars
-    ️ Titles & Subtitles
-    Advancements
-    Discord Webhooks
+### 🤩 Intro
 
-Base node:
-Code (Text):
-mannouncer
-Command permissions:
-Code (Text):
+**MAnnouncer** is a powerful and modular announcement plugin designed **specifically for Velocity 3.4.0+** and **Java 21+**.
 
-mannouncer.admin         # Access all commands
-mannouncer.reload        # Reload all plugin files
-mannouncer.test          # Run test announcements
-mannouncer.announcement  # Send and manage announcements
- 
-Per-announcement permissions:
-Code (Text):
-mannouncer.announcement.<type>.<server>.<id>
+It allows you to create and manage **per-server announcements** easily, with full control over formats, permissions, and delivery methods.
+
+Whether you run a competitive PvP server, a casual SMP, or a full-scale Velocity network — MAnnouncer makes it easy to:
+
+* Send **chat**, **title**, **bossbar**, and **advancement**-based messages.
+* Assign **custom permissions** per announcement type and server.
+* Manage toggles and cooldowns per message or message type.
+* Broadcast to **Discord via Webhooks** (each announcement has its own).
+* Detect if a server is down and alert via Discord.
+* Organize announcements using `servers/{servername}/` folders.
+* Enable/disable announcements with simple commands like:
+
+```bash
+/mannouncer announcement boxpvp 1 on
+/mannouncer announcement boxpvp 1 off
+```
+
+Each message type (chat, bossbar, title, advancement) has its own file, giving you full control.
+Includes centralized message support, `MiniMessage`, `#hex` colors, and future `ItemsAdder` support.
+
+---
+
+### 🛡️ Permissions
+
+Below are the permission nodes available in MAnnouncer. Each server and announcement type can be fully controlled with structured nodes.
+
+```yaml
+permissions:
+  # Base permission node for all commands and features
+  base: "mannouncer"
+
+  # Permission nodes for commands
+  commands:
+    admin: "mannouncer.admin"                # Full admin control
+    reload: "mannouncer.reload"              # Reload config & messages
+    test: "mannouncer.test"                  # Test announcements
+    announcement: "mannouncer.announcement"  # Announcement-related commands
+```
+
+**Per-Announcement-Type Permissions:**
+You can define permissions for specific announcement types and servers like this:
+
+```
+mannouncer.announcement.{type}.{servername}.{id}
+```
+
 Example:
-Code (Text):
+
+```
 mannouncer.announcement.chat.boxpvp.1
+```
 
-Each server has its own folder and announcement types inside:
+---
 
-Code (Text):
+### 📘️ Help
 
-/plugins/MAnnouncer/servers/<server-name>/
-├─ chat-announcement.yml
-├─ bossbar-announcement.yml
-├─ title-subtitle-announcement.yml
-├─ advancement-announcement.yml
- 
-To toggle announcements:
-Code (Text):
-/mannouncer announcement <server> <id> on|off
-✅ Supports MiniMessage formatting, HEX colors, and center-aligned lines
-✅ Per-announcement Discord webhook integration
-✅ Failure detection: If a server is offline, a webhook warning will be sent
-✅ Automatically reads servers from your velocity.toml file
+If the plugin doesn't seem to work:
 
-Still need help?
-➡️ Join our support Discord
+* Make sure you're using **Velocity 3.4.0 or above**
+* Your server must be running **Java 21**
+* Check if you’ve set up the right folders: `servers/BoxPvP/chat-announcement.yml`, etc.
+* Reload with `/mannouncer reload` after any change
+* Ensure permissions are correctly applied
 
+📩 For detailed support and community help, join our Discord:
+**[discord.gg/aghv3QT9wp](https://discord.gg/aghv3QT9wp)**
 
-✔ ItemsAdder support (planned)
-✔ Better performance for large networks
-✔ Improved Twitch/Kick/YouTube live event detection
-✔ More reliable and faster Discord webhook delivery
+---
 
-✅ Fully supports Java 21 and Velocity 3.4.0+ (including snapshots)​
+### 🔄 Next Update
+
+Here’s what’s coming in the next version:
+
+* ⚙️ General performance improvements
+* 🛠️ Fixes for Twitch/Kick/YouTube auto-live announcements
+* 🔧 Improved Discord webhook reliability
+* 🎨 Future ItemsAdder integration for styled messages
